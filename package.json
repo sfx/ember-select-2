@@ -10,7 +10,10 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/iStefo/ember-select-2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iStefo/ember-select-2"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -34,5 +37,31 @@
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "gitHead": "6d4abbf80b7e68bacf275400899960609bcc90b1",
+  "description": "Ember.js Wrapper for the [jQuery Select2 Plugin](http://ivaynberg.github.io/select2/). While not aiming for full API coverage at any cost, the actual focus is on providing a plugin that is easy to drop into an application and that plays nice with the embe",
+  "bugs": {
+    "url": "https://github.com/iStefo/ember-select-2/issues"
+  },
+  "homepage": "https://github.com/iStefo/ember-select-2",
+  "_id": "ember-select-2@1.2.0",
+  "_shasum": "c671632f4e1046cbcb3c12968428ab6da8030032",
+  "_from": "ember-select-2@>=1.1.1-beta1 <2.0.0",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "istefo",
+    "email": "istefo@me.com"
+  },
+  "maintainers": [
+    {
+      "name": "istefo",
+      "email": "istefo@me.com"
+    }
+  ],
+  "dist": {
+    "shasum": "c671632f4e1046cbcb3c12968428ab6da8030032",
+    "tarball": "http://registry.npmjs.org/ember-select-2/-/ember-select-2-1.2.0.tgz"
+  },
+  "_resolved": "https://registry.npmjs.org/ember-select-2/-/ember-select-2-1.2.0.tgz",
+  "readme": "ERROR: No README data found!"
 }

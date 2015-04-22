@@ -42,6 +42,7 @@ var Select2Component = Ember.Component.extend({
   allowClear: false,
   enabled: true,
   query: null,
+  queryParam: null,
   typeaheadSearchingText: 'Searching…',
   typeaheadNoMatchesText: 'No matches found',
   typeaheadErrorText: 'Loading failed',
@@ -74,6 +75,7 @@ var Select2Component = Ember.Component.extend({
     options.placeholder = this.get('placeholder');
     options.multiple = this.get('multiple');
     options.allowClear = this.get('allowClear');
+    options.queryParam = this.get('queryParam')
     options.minimumResultsForSearch = this.get('searchEnabled') ? 0 : -1 ;
 
     options.minimumInputLength = this.get('minimumInputLength');
@@ -152,7 +154,7 @@ var Select2Component = Ember.Component.extend({
       if (self.get('_typeaheadMode')) {
         var deferred = Ember.RSVP.defer('select2#query: ' + query.term);
 
-        self.sendAction('query', query, deferred);
+        self.sendAction('query', query, deferred, options.queryParam);
 
         deferred.promise.then(function(data) {
           if (data instanceof Ember.ArrayProxy) {
@@ -432,9 +434,7 @@ var Select2Component = Ember.Component.extend({
     }
 
     this.set("value", value);
-    Ember.run.schedule('actions', this, function() {
-      this.sendAction('didSelect', value, this);
-    });
+    this.sendAction('didSelect');
   },
 
   /**
